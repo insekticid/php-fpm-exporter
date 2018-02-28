@@ -45,7 +45,7 @@ var rootCmd = &cobra.Command{
 }
 
 func main() {
-	addr = rootCmd.PersistentFlags().StringP("addr", "", "127.0.0.1:8080", "listen address for metrics handler")
+	addr = rootCmd.PersistentFlags().StringP("addr", "", ":9253", "listen address for metrics handler")
 	endpoint = rootCmd.PersistentFlags().StringP("endpoint", "", "http://127.0.0.1:9000/status", "url for php-fpm status")
 	fcgiEndpoint = rootCmd.PersistentFlags().String("fastcgi", "", "fastcgi url. If this is set, fastcgi will be used instead of HTTP")
 
